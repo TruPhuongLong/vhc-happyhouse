@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './live-show.module.css'
+import styles from './slide-show.module.css'
 import Resident from './resident'
 
 export default class LiveShow extends React.Component {
@@ -34,7 +34,7 @@ export default class LiveShow extends React.Component {
                 </ul> */}
 
                 {/* <!-- The slideshow --> */}
-                <div className="carousel-inner">
+                <div className={`carousel-inner ${styles.carouselInner}`}>
                     {
                         this.data.map((resident, index) => {
                             return (<div className={`carousel-item ${index === 0 ? 'active' : ''}`}>
@@ -47,10 +47,10 @@ export default class LiveShow extends React.Component {
 
                 {/* <!-- Left and right controls --> */}
                 <a className={`carousel-control-prev `} href="#demo" data-slide="prev">
-                    <span className={`carousel-control-prev-icon ${styles.btn} ${styles.prev}`} style={{color: 'red'}}></span>
+                    <span className={`carousel-control-prev-icon`} ></span>
                 </a>
                 <a className={`carousel-control-next`} href="#demo" data-slide="next">
-                    <span className={`carousel-control-next-icon  ${styles.btn} ${styles.next}`}></span>
+                    <span className={`carousel-control-next-icon`}></span>
                 </a>
 
             </div>

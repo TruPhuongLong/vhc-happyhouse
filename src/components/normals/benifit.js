@@ -4,7 +4,7 @@ import styles from './benifit.module.css'
 
 export default () => {
     return (
-        <div className={styles.container}>
+        <div className={`table-responsive-sm`}>
             <table className="table">
                 <thead>
                     <tr>

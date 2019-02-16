@@ -10,12 +10,8 @@
     object-fit: cover;
 }
 
-.menu {
-
-}
-
-.menu a{
-    font-size: 10px;
-    text-decoration: none;
-    padding: 0 30px;
+.flag{
+    max-width: 20px;
+    height: 15px;
+    object-fit: cover;
 }
