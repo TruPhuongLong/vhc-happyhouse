@@ -1,0 +1,15 @@
+.container{
+
+}
+
+.logo{
+    min-width: 100px;
+    max-width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+.bg{
+    background-color: #FFF4DC;
+
+}

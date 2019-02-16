@@ -1,0 +1,21 @@
+.container{
+    padding: 25px;
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    justify-content: space-between
+}
+
+.logo{
+    width: 180px;
+    object-fit: cover;
+}
+
+.menu {
+
+}
+
+.menu a{
+    font-size: 10px;
+    text-decoration: none;
+    padding: 0 30px;
+}
