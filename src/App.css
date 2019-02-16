@@ -1,4 +1,17 @@
-.container-indent{
+.container-indent-75 {
     width: 75%;
     margin: auto;
+}
+
+.container-indent-50 {
+    width: 75%;
+    margin: auto;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("asset/arrow-left.png") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("asset/arrow-right.png") !important;
 }

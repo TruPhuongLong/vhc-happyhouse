@@ -1,0 +1,11 @@
+.btn{
+    color: red;
+}
+
+.prev{
+    margin-left: -150px;
+}
+
+.next{
+    margin-right: -150px;
+}

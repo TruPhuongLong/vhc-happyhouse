@@ -5,6 +5,10 @@
     border-radius: 5px;
 }
 
+.content{
+    height: 300px;
+}
+
 /* >= medium devices (landscape phones, greater than 768px) */
 
 @media (min-width: 768px) {

@@ -29,19 +29,19 @@ class App extends Component {
         <div className="container">
           <h1 className="text-center">How HomeShare Works</h1><br /><br /><br />
 
-          <div className="container-indent" style={{ marginTop: '70px' }}>
+          <div className="container-indent-75" style={{ marginTop: '70px' }}>
             <HowItWorks imgSrc="images/how_it_works_1.png">
               <p>Select a room in one of our partner buildings. Then, schedule a call or in-person tour.</p>
             </HowItWorks>
           </div>
 
-          <div className="container-indent" style={{ marginTop: '70px' }} >
+          <div className="container-indent-75" style={{ marginTop: '70px' }} >
             <HowItWorks imgSrc="images/how_it_works_2.png" isImageRight>
               <p>Select a room in one of our partner buildings. Then, schedule a call or in-person tour.</p>
             </HowItWorks>
           </div>
 
-          <div className="container-indent" style={{ marginTop: '70px' }} >
+          <div className="container-indent-75" style={{ marginTop: '70px' }} >
             <HowItWorks imgSrc="images/how_it_works_3.png">
               <p>Select a room in one of our partner buildings. Then, schedule a call or in-person tour.</p>
             </HowItWorks>
@@ -56,17 +56,23 @@ class App extends Component {
         </div>
 
         <br /><br /><br /><br />
-        <div className="container-indent">
+        <div className="container-indent-75">
           <Benifit />
         </div>
 
         <br /><br /><br /><br />
-        <h4>HEAR FROM OUR RESIDENTS</h4>
-        <LiveShow />
-
+        <div className="row">
+          <div className="col-md-6 offset-md-3">
+            <h4>HEAR FROM OUR RESIDENTS</h4>
+            <LiveShow />
+          </div>
+        </div>
+  >
+  
+  
       </div>
-    );
-  }
-}
-
-export default App;
+        );
+      }
+    }
+    
+    export default App;
