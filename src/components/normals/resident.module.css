@@ -1,0 +1,15 @@
+.img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* >= medium devices (landscape phones, greater than 768px) */
+
+@media (min-width: 768px) {
+    .img {
+        width: 140px;
+        height: 140px;
+    }
+}

@@ -5,6 +5,7 @@ import Header from './components/normals/header'
 import ImageShow from './components/normals/image-show'
 import HowItWorks from './components/normals/how-it-works'
 import Benifit from './components/normals/benifit'
+import LiveShow from './components/normals/live-show'
 
 class App extends Component {
   render() {
@@ -61,6 +62,7 @@ class App extends Component {
 
         <br /><br /><br /><br />
         <h4>HEAR FROM OUR RESIDENTS</h4>
+        <LiveShow />
 
       </div>
     );
