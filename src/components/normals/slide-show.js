@@ -46,11 +46,11 @@ export default class LiveShow extends React.Component {
                 </div>
 
                 {/* <!-- Left and right controls --> */}
-                <a className={`carousel-control-prev `} href="#demo" data-slide="prev">
-                    <span className={`carousel-control-prev-icon`} ></span>
+                <a className={`carousel-control-prev`} href="#demo" data-slide="prev">
+                    <span className={`carousel-control-prev-icon ${styles.prev}`} ></span>
                 </a>
                 <a className={`carousel-control-next`} href="#demo" data-slide="next">
-                    <span className={`carousel-control-next-icon`}></span>
+                    <span className={`carousel-control-next-icon ${styles.next}`}></span>
                 </a>
 
             </div>

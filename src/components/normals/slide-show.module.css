@@ -1,3 +1,26 @@
 .carouselInner{
     padding: 0 70px;
 }
+
+.prev{
+    margin-left: 0;
+}
+
+.next{
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    .carouselInner {
+        padding: 0;
+    }
+
+    .prev{
+        margin-left: -150px;
+    }
+    
+    .next{
+        margin-right: -150px;
+    }
+
+}
