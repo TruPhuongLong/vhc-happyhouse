@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
+import { FacebookProvider, Comments, CommentsCount } from 'react-facebook'
+
+
 import './App.css';
 import Header from './components/normals/header'
 import ImageShow from './components/normals/image-show'
@@ -115,6 +118,16 @@ class App extends Component {
             <SlideShow />
           </div>
         </div>
+
+        <br /><br /><br /><br />
+        <div className="container text-center">
+          <FacebookProvider appId="346089532660486">
+            <Comments href="https://vhc-happyhouse.herokuapp.com/" />
+            {/* <CommentsCount href="https://vhc-happyhouse.herokuapp.com/" /> */}
+          </FacebookProvider>
+        </div>
+
+
 
         <br /><br /><br /><br />
         <Footer />
