@@ -8,6 +8,8 @@
     transition-property: transform;
     transition-duration: .3s;
     -webkit-transition: .3s;
+
+    /* animation: rainbow-background 5s infinite; */
 }
 
 .container:hover {
@@ -74,6 +76,3 @@
     }
 }
 
-.container {
-    animation: rainbow-background 5s infinite;
-}
