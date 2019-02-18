@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
-
 import { FacebookProvider, Comments, CommentsCount } from 'react-facebook'
-
 
 import './App.css';
 import Header from './components/normals/header'
+import Children1 from './components/normals/children1'
 import ImageShow from './components/normals/image-show'
 import HowItWorks from './components/normals/how-it-works'
 import Benifit from './components/normals/benifit'
@@ -14,50 +13,16 @@ import Footer from './components/normals/footer'
 
 class App extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      currentLag: 'EN',
-      languages: ["EN", "VI", "JP"]
-    }
-  }
-
-  onLanguageChange = (event) => {
-    console.log("===", event.target.value)
-    const chooseLag = event.target.value
-    this.setState({
-      currentLag: chooseLag
-    })
-  }
 
   render() {
-    const { currentLag, languages } = this.state
     return (
       <div>
-        <Header languages={languages} onLanguageChange={this.onLanguageChange} />
+        <Header />
 
         <br /><br />
 
         <div className="container">
-          {
-            currentLag === 'VI' ?
-              // VI
-              <Fragment>
-                <h1>Chia sẻ phòng</h1>
-                <p>Chuyển đến tòa nhà sang trọng với mức giá chia nhỏ cho các bạn cùng phòng. </p>
-              </Fragment>
-              : currentLag === 'EN' ?
-                //EN
-                <Fragment>
-                  <h1>Shared Apartment Living</h1>
-                  <p>Move into a luxury building at a fraction of the cost. We enable individuals to thrive together as housemates.</p>
-                </Fragment>
-                : //JP
-                <Fragment>
-
-                </Fragment>
-          }
-
+          <Children1 />
         </div>
 
 

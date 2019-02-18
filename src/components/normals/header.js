@@ -1,29 +1,43 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import {LANGUAGE_SWITCH} from '../../redux/actions/type'
 
 import styles from './header.module.css'
 
+class Header extends React.Component {
+    render() {
+        const {languages, current, switchLanguage} = this.props
+        return (
+            <div className={styles.container}>
+                <div>
+                    <img className={styles.logo} src="images/Logo-main.svg" />
+                </div>
+                <div>
+                    <select name="laguage" className={`form-control`} onChange={e => switchLanguage(e.target.value)}>
 
-export default ({languages = [], onLanguageChange = f => f}) => {
-    return (
-        <div className={styles.container}>
-            <div>
-                <img className={styles.logo} src="images/Logo-main.svg" />
+                        {
+                            languages.map((item, index) => (
+                                <option value={index} defaultValue={current} key={item}>{item}</option>
+                            ))
+                        }
+                    </select>
+                </div>
             </div>
-            <div>
-                <select name="laguage" className={`form-control`} onChange={onLanguageChange}>
-                    {/* <option value="vi" data-thumbnail="images/Flag_of_Vietnam.svg">  VI</option>
-                    <option value="en" data-thumbnail="images/Flag_of_the_United_Kingdom.svg">EN</option>
-                    <option value="jp" data-thumbnail="images/Flag_of_Japan.png">JP</option> */}
-                    {
-                        languages.map(item => (
-                            <option value={item}>{item}</option>
-                        ))
-                    }
-                </select>
-            </div>
-
-        </div>
-    )
-
-   
+        )
+    }
 }
+
+const mapStateToProps = (state) => {
+    const { languages, current } = state.languageState;
+    return { languages, current };
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        switchLanguage: (index) => {
+            dispatch({type: LANGUAGE_SWITCH, payload: index})
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)
