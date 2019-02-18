@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './slide-show.module.css'
 import Resident from './resident'
 
-export default class LiveShow extends React.Component {
+export default class SlideShow extends React.Component {
     data = [
         { job: 'Student', age: 21, imgSrc: 'images/resident1.jpeg', address: 'Prospect Gardens', content: 'The HomeShare team has made it SO easy to accommodate all of my apartment needs! They are incredibly responsible and honest! Amazing experience, and great for students looking for affordable, clean living in the city!' },
         { job: 'Marketing Director', age: 30, imgSrc: 'images/resident2.jpeg', address: 'Potrero 1010', content: 'Honestly, I\'m super happy with how everything turned out. All the bottlenecks were handled very quickly.' },
@@ -37,7 +37,7 @@ export default class LiveShow extends React.Component {
                 <div className={`carousel-inner ${styles.carouselInner}`}>
                     {
                         this.data.map((resident, index) => {
-                            return (<div className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                            return (<div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
                                 <Resident {...resident} />
                             </div>)
                         })
